@@ -1,384 +1,449 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gem-Media-Tech — Web, Design & Vidéo</title>
+<meta name="description" content="Gem-Media-Tech crée des sites web modernes, des visuels professionnels et des vidéos adaptées à votre activité.">
+<meta name="robots" content="index, follow">
 
-  <title>Gem-Media-Tech | Création de sites web, design & vidéo</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-  <meta name="description" content="Gem-Media-Tech crée des sites web modernes, des designs professionnels et des montages vidéo pour entreprises, entrepreneurs et particuliers.">
-  <meta name="keywords" content="création site web, site vitrine, développement web, design, Photoshop, montage vidéo, Madagascar">
-  <meta name="author" content="Gem-Media-Tech">
+<style>
+.home{overflow:hidden}
+.home-container{width:min(1120px,92%);margin:auto}
+.home-section{padding:90px 0}
+.home-kicker{color:#55aaff;font-size:12px;font-weight:800;letter-spacing:3px;margin-bottom:15px}
+.home-heading{margin:0 0 18px;font-size:clamp(34px,5vw,56px);line-height:1.08;letter-spacing:-1.5px}
+.home-text{color:#aeb8ca;line-height:1.8;max-width:700px}
 
-  <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#05070d">
+.home-hero{
+min-height:680px;
+display:flex;
+align-items:center;
+background:
+linear-gradient(90deg,rgba(5,8,17,.97),rgba(5,8,17,.82),rgba(5,8,17,.5)),
+url("images/home-web.jpg") center/cover no-repeat
+}
+.hero-content{
+width:min(1120px,92%);
+margin:auto;
+display:grid;
+grid-template-columns:1.05fr .95fr;
+gap:55px;
+align-items:center
+}
+.hero-copy h1{
+margin:0 0 22px;
+font-size:clamp(42px,6vw,72px);
+line-height:1.03;
+letter-spacing:-2.5px
+}
+.hero-copy h1 span{
+background:linear-gradient(90deg,#55aaff,#9a6cff);
+-webkit-background-clip:text;
+background-clip:text;
+color:transparent
+}
+.hero-copy p{max-width:650px;color:#b5bfd0;font-size:17px;line-height:1.8}
+.hero-actions{display:flex;flex-wrap:wrap;gap:13px;margin-top:30px}
 
-  <link rel="canonical" href="https://TON-DOMAINE-RENDER/">
+.home-btn{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:9px;
+min-height:48px;
+padding:0 22px;
+border-radius:11px;
+text-decoration:none;
+font-weight:700;
+transition:.2s
+}
+.home-btn:hover{transform:translateY(-2px);opacity:.92}
+.home-btn.primary{color:#fff;background:linear-gradient(135deg,#168cff,#7655ff)}
+.home-btn.secondary{
+color:#dce5f5;
+border:1px solid rgba(255,255,255,.14);
+background:rgba(10,15,27,.72)
+}
 
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Gem-Media-Tech | Web, Design & Vidéo">
-  <meta property="og:description" content="Création de sites web, design professionnel et montage vidéo.">
-  <meta property="og:image" content="https://TON-DOMAINE-RENDER/images/logo.png">
-  <meta property="og:url" content="https://TON-DOMAINE-RENDER/">
-  <meta property="og:site_name" content="Gem-Media-Tech">
-  <meta property="og:locale" content="fr_FR">
+.code-window{
+border:1px solid rgba(255,255,255,.12);
+border-radius:18px;
+overflow:hidden;
+background:rgba(7,11,21,.94);
+box-shadow:0 25px 70px rgba(0,0,0,.42)
+}
+.code-top{
+display:flex;
+align-items:center;
+gap:7px;
+padding:13px 16px;
+border-bottom:1px solid rgba(255,255,255,.08)
+}
+.code-dot{width:9px;height:9px;border-radius:50%;background:#64748b}
+.code-title{margin-left:8px;color:#7f8ba0;font:12px monospace}
+.code-body{padding:25px;overflow:auto}
+.code-body pre{margin:0;color:#cbd5e1;font:13px/1.85 monospace}
+.code-blue{color:#55aaff}.code-purple{color:#b78cff}.code-green{color:#67d6a0}
 
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Gem-Media-Tech | Web, Design & Vidéo">
-  <meta name="twitter:description" content="Création de sites web, design professionnel et montage vidéo.">
-  <meta name="twitter:image" content="https://TON-DOMAINE-RENDER/images/logo.png">
+.home-services{background:#080b13}
+.home-header{text-align:center;max-width:760px;margin:0 auto 45px}
+.home-header .home-text{margin:auto}
 
-  <link rel="icon" type="image/png" href="images/logo.png">
+.home-service-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:22px
+}
+.home-service{
+overflow:hidden;
+border:1px solid rgba(255,255,255,.08);
+border-radius:20px;
+background:#0c111e;
+transition:.25s
+}
+.home-service:hover{
+transform:translateY(-5px);
+border-color:rgba(85,170,255,.35)
+}
+.home-service-image{
+height:225px;
+background-size:cover;
+background-position:center
+}
+.home-web{background-image:url("images/home-web.jpg")}
+.home-design{background-image:url("images/home-design.jpg")}
+.home-video{background-image:url("images/home-video.jpg")}
+.home-service-content{padding:27px}
+.home-service-number{color:#55aaff;font:700 12px monospace;letter-spacing:2px}
+.home-service h3{margin:10px 0 12px;font-size:23px}
+.home-service p{min-height:78px;margin:0 0 22px;color:#aeb8ca;line-height:1.7}
+.home-link{
+display:inline-flex;
+align-items:center;
+gap:8px;
+color:#66b5ff;
+text-decoration:none;
+font-weight:700
+}
 
-  <link rel="stylesheet" href="style.css">
+.home-offers{
+background:radial-gradient(circle at 15% 10%,rgba(75,115,255,.12),transparent 32%),#070a12
+}
+.offer-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:22px;
+max-width:900px;
+margin:0 auto 28px
+}
+.offer-card{
+padding:35px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.09);
+background:linear-gradient(145deg,#0d1422,#090d17)
+}
+.offer-card.featured{border-color:rgba(85,170,255,.35)}
+.offer-label{color:#55aaff;font-size:11px;font-weight:800;letter-spacing:2px}
+.offer-card h3{margin:12px 0 10px;font-size:27px}
+.offer-price{margin:15px 0 20px;font-size:31px;font-weight:800}
+.offer-price small{color:#8e9ab0;font-size:15px;font-weight:500}
+.offer-card p{color:#aeb8ca;line-height:1.7}
+.offer-features{margin:22px 0 27px;padding:0;list-style:none}
+.offer-features li{margin:10px 0;color:#d4dbea}
+.offer-features i{margin-right:8px;color:#55aaff}
+.offer-center{text-align:center}
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "Gem-Media-Tech",
-    "description": "Création de sites web, design professionnel et montage vidéo.",
-    "email": "mode.gem.mada@gmail.com",
-    "telephone": "+261385164780",
-    "url": "https://TON-DOMAINE-RENDER/",
-    "sameAs": [
-      "https://www.facebook.com/GemMediaTech"
-    ],
-    "areaServed": "Madagascar",
-    "serviceType": [
-      "Création de sites web",
-      "Design graphique",
-      "Montage vidéo"
-    ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Combien coûte un site vitrine ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "L'offre de base de Gem-Media-Tech commence à 31 € / 150 000 Ar."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Le site fonctionne-t-il sur téléphone ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Les sites sont conçus pour être adaptés aux smartphones, tablettes et ordinateurs."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Proposez-vous des sites avec backend ?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Oui. Les projets avec fonctionnalités dynamiques, backend ou base de données commencent à partir de 121 € / 600 000 Ar selon les besoins."
-        }
-      }
-    ]
-  }
-  </script>
+.home-approach{background:#080b13}
+.approach-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px
+}
+.approach-card{
+padding:30px;
+border-radius:18px;
+background:#0c111e;
+border:1px solid rgba(255,255,255,.08)
+}
+.approach-card i{font-size:22px;color:#55aaff}
+.approach-card h3{margin:17px 0 10px}
+.approach-card p{margin:0;color:#aeb8ca;line-height:1.7}
 
+.home-cta{
+padding:100px 0;
+text-align:center;
+background:
+linear-gradient(90deg,rgba(6,9,17,.94),rgba(6,9,17,.8)),
+url("images/home-video.jpg") center/cover no-repeat
+}
+.home-cta .home-text{margin:0 auto 28px}
+
+@media(max-width:850px){
+.hero-content{grid-template-columns:1fr;gap:40px}
+.home-hero{min-height:auto;padding:90px 0}
+.home-service-grid,.approach-grid,.offer-grid{grid-template-columns:1fr}
+.home-service p{min-height:auto}
+}
+@media(max-width:600px){
+.home-section{padding:70px 0}
+.hero-copy h1{font-size:43px}
+.hero-copy p{font-size:15px}
+.hero-actions{flex-direction:column}
+.home-btn{width:100%}
+.code-body{padding:18px}
+.code-body pre{font-size:11px}
+.home-service-image{height:210px}
+.offer-card{padding:27px 22px}
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <a href="#" class="logo" aria-label="Gem-Media-Tech - Accueil">
-    <img src="images/logo.png" alt="Logo Gem-Media-Tech">
-  </a>
+<a href="index.html" aria-label="Gem-Media-Tech — Accueil">
+<img src="images/logo.png" alt="Gem-Media-Tech" class="logo">
+</a>
 
-  <button class="menu-toggle" type="button" aria-label="Ouvrir le menu" aria-expanded="false">
-    ☰
-  </button>
+<button class="menu-toggle" type="button" aria-label="Ouvrir le menu">☰</button>
 
-  <nav aria-label="Navigation principale">
-    <a href="#services">Services</a>
-    <a href="#offres">Offres</a>
-    <a href="#apropos">À propos</a>
-    <a href="#faq">FAQ</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<nav>
+<a href="index.html">Accueil</a>
+<a href="services.html">Services</a>
+<a href="offres.html">Offres</a>
+<a href="a-propos.html">À propos</a>
+<a href="offres.html#faq">FAQ</a>
+<a href="contact.html">Contact</a>
+</nav>
 </header>
 
-<main>
+<main class="home">
 
-<section id="hero">
-  <p>WEB • DESIGN • VIDÉO</p>
+<section class="home-hero">
+<div class="hero-content">
 
-  <h1>Transformons vos idées en présence digitale.</h1>
+<div class="hero-copy">
+<div class="home-kicker">WEB • DESIGN • VIDÉO</div>
 
-  <p>
-    Des solutions modernes pour créer, développer et valoriser
-    votre présence en ligne.
-  </p>
+<h1>Votre projet mérite <span>une vraie présence digitale.</span></h1>
 
-  <div>
-    <a
-      href="https://wa.me/261385164780?text=Bonjour%20Gem-Media-Tech%2C%20je%20souhaite%20parler%20de%20mon%20projet."
-      class="btn"
-      target="_blank"
-      rel="noopener"
-    >
-      Discuter sur WhatsApp
-    </a>
+<p>
+Gem-Media-Tech crée des sites web modernes, des visuels professionnels
+et des vidéos pensées pour votre activité.
+</p>
 
-    <a href="#offres" class="btn secondary">
-      Voir les offres
-    </a>
-  </div>
+<div class="hero-actions">
+<a class="home-btn primary" href="https://wa.me/261385164780" target="_blank" rel="noopener">
+<i class="fa-brands fa-whatsapp"></i> Discuter sur WhatsApp
+</a>
+
+<a class="home-btn secondary" href="services.html">
+Découvrir nos services <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</div>
+
+<div class="code-window">
+<div class="code-top">
+<span class="code-dot"></span>
+<span class="code-dot"></span>
+<span class="code-dot"></span>
+<span class="code-title">gem-media-tech / project.js</span>
+</div>
+
+<div class="code-body">
+<pre><span class="code-purple">const</span> project = {
+  <span class="code-blue">name</span>: <span class="code-green">"Gem-Media-Tech"</span>,
+  <span class="code-blue">services</span>: [
+    <span class="code-green">"Web Development"</span>,
+    <span class="code-green">"Graphic Design"</span>,
+    <span class="code-green">"Video Editing"</span>
+  ],
+  <span class="code-blue">responsive</span>: <span class="code-purple">true</span>,
+  <span class="code-blue">modern</span>: <span class="code-purple">true</span>
+};
+
+<span class="code-purple">function</span> createProject(project) {
+  <span class="code-purple">return</span> <span class="code-green">"Your idea → our expertise"</span>;
+}</pre>
+</div>
+</div>
+
+</div>
 </section>
 
-<section id="services">
-  <h2>Nos services</h2>
+<section class="home-section home-services">
+<div class="home-container">
 
-  <div class="services">
+<div class="home-header">
+<div class="home-kicker">NOS EXPERTISES</div>
+<h2 class="home-heading">Des solutions créatives et digitales.</h2>
+<p class="home-text">
+De l'idée jusqu'au résultat final, nous construisons des solutions adaptées à votre activité.
+</p>
+</div>
 
-    <article>
-      <h3>Création de sites web</h3>
-      <p>
-        Sites vitrines modernes, rapides, responsive et adaptés
-        à votre activité.
-      </p>
-    </article>
+<div class="home-service-grid">
 
-    <article>
-      <h3>Design & Photoshop</h3>
-      <p>
-        Création et retouche de visuels pour donner une identité
-        professionnelle à vos projets.
-      </p>
-    </article>
+<article class="home-service">
+<div class="home-service-image home-web"></div>
+<div class="home-service-content">
+<div class="home-service-number">01 / WEB</div>
+<h3>Création de sites web</h3>
+<p>Sites vitrines modernes, rapides, responsive et adaptés à votre activité.</p>
+<a class="home-link" href="services.html#web">
+Découvrir <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</article>
 
-    <article>
-      <h3>Montage vidéo</h3>
-      <p>
-        Montage de vidéos modernes pour les réseaux sociaux,
-        entreprises et projets personnels.
-      </p>
-    </article>
+<article class="home-service">
+<div class="home-service-image home-design"></div>
+<div class="home-service-content">
+<div class="home-service-number">02 / DESIGN</div>
+<h3>Design & Photoshop</h3>
+<p>Création et retouche de visuels pour construire une identité professionnelle.</p>
+<a class="home-link" href="services.html#design">
+Découvrir <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</article>
 
-  </div>
+<article class="home-service">
+<div class="home-service-image home-video"></div>
+<div class="home-service-content">
+<div class="home-service-number">03 / VIDÉO</div>
+<h3>Montage vidéo</h3>
+<p>Des montages modernes pour les réseaux sociaux, les entreprises et vos projets.</p>
+<a class="home-link" href="services.html#video">
+Découvrir <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
+</article>
+
+</div>
+</div>
 </section>
 
-<section id="offres">
+<section class="home-section home-offers">
+<div class="home-container">
 
-  <h2>Nos offres</h2>
+<div class="home-header">
+<div class="home-kicker">NOS OFFRES</div>
+<h2 class="home-heading">Commencez simplement.</h2>
+<p class="home-text">
+Deux points de départ pour les besoins les plus courants.
+Les projets spécifiques peuvent être développés sur mesure.
+</p>
+</div>
 
-  <div class="offers">
+<div class="offer-grid">
 
-    <article class="offer featured">
+<article class="offer-card featured">
+<div class="offer-label">OFFRE ESSENTIELLE</div>
+<h3>Site vitrine</h3>
+<div class="offer-price">31 € <small>/ 150 000 Ar</small></div>
+<p>Une présence professionnelle sur le web, simple, moderne et efficace.</p>
 
-      <p>OFFRE ESSENTIELLE</p>
+<ul class="offer-features">
+<li><i class="fa-solid fa-check"></i> Design responsive</li>
+<li><i class="fa-solid fa-check"></i> Présentation de votre activité</li>
+<li><i class="fa-solid fa-check"></i> Liens réseaux sociaux</li>
+<li><i class="fa-solid fa-check"></i> SEO de base</li>
+</ul>
 
-      <h3>Site vitrine</h3>
+<a class="home-btn primary" href="offres.html#vitrine">
+Voir cette offre <i class="fa-solid fa-arrow-right"></i>
+</a>
+</article>
 
-      <div class="price">
-        <strong>31 €</strong>
-        <span>150 000 Ar</span>
-      </div>
+<article class="offer-card">
+<div class="offer-label">SOLUTION SUR MESURE</div>
+<h3>Site avec backend</h3>
+<div class="offer-price">121 € <small>/ 600 000 Ar</small></div>
+<p>Une solution évolutive avec des fonctionnalités dynamiques selon votre projet.</p>
 
-      <del>300 000 Ar</del>
+<ul class="offer-features">
+<li><i class="fa-solid fa-check"></i> Fonctionnalités dynamiques</li>
+<li><i class="fa-solid fa-check"></i> Backend</li>
+<li><i class="fa-solid fa-check"></i> Base de données selon le projet</li>
+<li><i class="fa-solid fa-check"></i> Développement sur mesure</li>
+</ul>
 
-      <p>
-        Une présence professionnelle sur le web, simple,
-        moderne et efficace.
-      </p>
+<a class="home-btn secondary" href="offres.html#backend">
+Voir cette solution <i class="fa-solid fa-arrow-right"></i>
+</a>
+</article>
 
-      <ul>
-        <li>Design responsive</li>
-        <li>Présentation de votre activité</li>
-        <li>Liens réseaux sociaux</li>
-        <li>Optimisation SEO de base</li>
-        <li>HTTPS</li>
-      </ul>
+</div>
 
-      <a
-        href="https://wa.me/261385164780?text=Bonjour%20Gem-Media-Tech%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20l%27offre%20Site%20vitrine%20%C3%A0%2031%20%E2%82%AC%20%2F%20150%20000%20Ar."
-        class="btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Commander
-      </a>
+<div class="offer-center">
+<a class="home-link" href="offres.html">
+Voir toutes les offres <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
 
-    </article>
-
-    <article class="offer">
-
-      <p>SOLUTION SUR MESURE</p>
-
-      <h3>Site avec backend</h3>
-
-      <div class="price">
-        <strong>121 €</strong>
-        <span>600 000 Ar</span>
-      </div>
-
-      <p>
-        À partir de 600 000 Ar selon les fonctionnalités,
-        le backend et les besoins du projet.
-      </p>
-
-      <ul>
-        <li>Fonctionnalités dynamiques</li>
-        <li>Backend</li>
-        <li>Base de données selon le projet</li>
-        <li>Espace d'administration selon les besoins</li>
-        <li>Développement sur mesure</li>
-      </ul>
-
-      <a
-        href="https://wa.me/261385164780?text=Bonjour%20Gem-Media-Tech%2C%20je%20souhaite%20discuter%20d%27un%20site%20avec%20backend%20%C3%A0%20partir%20de%20121%20%E2%82%AC%20%2F%20600%20000%20Ar."
-        class="btn"
-        target="_blank"
-        rel="noopener"
-      >
-        Demander un devis
-      </a>
-
-    </article>
-
-  </div>
+</div>
 </section>
 
-<section id="pourquoi">
+<section class="home-section home-approach">
+<div class="home-container">
 
-  <h2>Pourquoi Gem-Media-Tech ?</h2>
+<div class="home-header">
+<div class="home-kicker">NOTRE APPROCHE</div>
+<h2 class="home-heading">Pensé pour être beau. Conçu pour être utile.</h2>
+</div>
 
-  <div class="services">
+<div class="approach-grid">
 
-    <article>
-      <h3>Design moderne</h3>
-      <p>
-        Des interfaces pensées pour être élégantes, claires
-        et adaptées aux appareils mobiles.
-      </p>
-    </article>
+<article class="approach-card">
+<i class="fa-solid fa-wand-magic-sparkles"></i>
+<h3>Design moderne</h3>
+<p>Des interfaces élégantes, claires et adaptées aux smartphones, tablettes et ordinateurs.</p>
+</article>
 
-    <article>
-      <h3>Solutions adaptées</h3>
-      <p>
-        Chaque projet est construit selon vos besoins,
-        votre activité et vos objectifs.
-      </p>
-    </article>
+<article class="approach-card">
+<i class="fa-solid fa-sliders"></i>
+<h3>Solutions adaptées</h3>
+<p>Chaque projet est construit selon votre activité, vos besoins et vos objectifs.</p>
+</article>
 
-    <article>
-      <h3>Contact direct</h3>
-      <p>
-        Un échange simple et rapide par WhatsApp ou email
-        pour discuter directement de votre projet.
-      </p>
-    </article>
+<article class="approach-card">
+<i class="fa-solid fa-comments"></i>
+<h3>Contact direct</h3>
+<p>Un échange simple et rapide pour comprendre votre projet et avancer efficacement.</p>
+</article>
 
-  </div>
-
+</div>
+</div>
 </section>
 
-<section id="apropos">
+<section class="home-cta">
+<div class="home-container">
+<div class="home-kicker">VOTRE PROJET COMMENCE ICI</div>
+<h2 class="home-heading">Une idée ? Transformons-la en projet.</h2>
+<p class="home-text">
+Site web, design ou vidéo : dites-nous ce que vous avez en tête
+et construisons quelque chose de professionnel.
+</p>
 
-  <h2>Gem-Media-Tech</h2>
-
-  <p>
-    Gem-Media-Tech accompagne les entrepreneurs, entreprises
-    et particuliers dans leurs projets digitaux.
-  </p>
-
-  <p>
-    Notre approche combine création web, design et montage vidéo
-    pour transformer vos idées en projets concrets.
-  </p>
-
-  <p>
-    <strong>Web, design & vidéo. Pensés pour vous.</strong>
-  </p>
-
-</section>
-
-<section id="faq">
-
-  <h2>Questions fréquentes</h2>
-
-  <div class="services">
-
-    <article>
-      <h3>Combien coûte un site vitrine ?</h3>
-      <p>
-        Notre offre de base commence à 150 000 Ar, soit 31 €,
-        selon le contenu et les besoins du projet.
-      </p>
-    </article>
-
-    <article>
-      <h3>Le site fonctionne-t-il sur téléphone ?</h3>
-      <p>
-        Oui. Les sites sont conçus pour être adaptés aux
-        smartphones, tablettes et ordinateurs.
-      </p>
-    </article>
-
-    <article>
-      <h3>Proposez-vous des sites avec backend ?</h3>
-      <p>
-        Oui. Les projets avec fonctionnalités dynamiques,
-        backend ou base de données commencent à partir de
-        121 € / 600 000 Ar selon les besoins.
-      </p>
-    </article>
-
-  </div>
-
-</section>
-
-<section id="contact">
-
-  <h2>Parlons de votre projet</h2>
-
-  <p>
-    Une idée, un projet ou simplement une question ?
-    Contactez-nous directement.
-  </p>
-
-  <a
-    href="https://wa.me/261385164780?text=Bonjour%20Gem-Media-Tech%2C%20je%20souhaite%20parler%20de%20mon%20projet."
-    class="btn"
-    target="_blank"
-    rel="noopener"
-  >
-    WhatsApp
-  </a>
-
-  <a
-    href="mailto:mode.gem.mada@gmail.com"
-    class="btn secondary"
-  >
-    Envoyer un email
-  </a>
-
-  <p>
-    Facebook :
-    <a href="https://www.facebook.com/GemMediaTech" target="_blank" rel="noopener">
-      Gem-Media-Tech
-    </a>
-  </p>
-
+<a class="home-btn primary" href="contact.html">
+Nous contacter <i class="fa-solid fa-arrow-right"></i>
+</a>
+</div>
 </section>
 
 </main>
 
 <footer>
-  <p>© 2026 Gem-Media-Tech — Web, Design & Vidéo.</p>
+<p>© 2026 Gem-Media-Tech — Web, Design & Vidéo.</p>
 </footer>
 
 <script src="script.js"></script>
-
 </body>
 </html>
