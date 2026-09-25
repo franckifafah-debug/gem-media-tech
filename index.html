@@ -218,6 +218,117 @@ url("images/home-video.jpg") center/cover no-repeat
 }
 </style>
 
+
+<style id="homepage-price-buttons">
+
+.promo-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-bottom: 10px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff8a00);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .8px;
+  box-shadow: 0 6px 18px rgba(255,90,80,.25);
+}
+
+.price-main {
+  display: inline-block;
+  font-size: 1.35em;
+  font-weight: 900;
+  background: linear-gradient(90deg, #55aaff, #8b5cf6, #d946ef);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.price-ar {
+  font-weight: 700;
+}
+
+.old-price {
+  display: block;
+  margin-top: 9px;
+  color: #8993a8;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.old-price s:first-child {
+  margin-right: 8px;
+}
+
+.old-price s:last-child {
+  background: linear-gradient(90deg, #55aaff, #8b5cf6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.service-button {
+  display: inline-flex !important;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 22px;
+  padding: 13px 21px;
+  min-width: 145px;
+  border-radius: 12px;
+  color: #fff !important;
+  text-decoration: none !important;
+  font-weight: 800;
+  font-size: 14px;
+  letter-spacing: .2px;
+  border: 1px solid rgba(255,255,255,.18);
+  box-shadow: 0 8px 22px rgba(0,0,0,.25);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
+}
+
+.service-button span {
+  font-size: 18px;
+  line-height: 1;
+  transition: transform .2s ease;
+}
+
+.web-button {
+  background: linear-gradient(135deg, #087cff, #5b5cf6);
+}
+
+.design-button {
+  background: linear-gradient(135deg, #8b5cf6, #d946ef);
+}
+
+.video-button {
+  background: linear-gradient(135deg, #ec4899, #f97316);
+}
+
+.service-button:hover {
+  transform: translateY(-3px);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 28px rgba(0,0,0,.35);
+}
+
+.service-button:hover span {
+  transform: translateX(4px);
+}
+
+.service-button:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 500px) {
+  .service-button {
+    width: 100%;
+    min-width: 0;
+  }
+}
+
+</style>
+
 </head>
 
 <body>
