@@ -219,23 +219,10 @@ url("images/home-video.jpg") center/cover no-repeat
 </style>
 
 
+
+
+
 <style id="homepage-price-buttons">
-
-.promo-badge {
-  display: inline-flex;
-  align-items: center;
-  width: fit-content;
-  margin-bottom: 10px;
-  padding: 6px 11px;
-  border-radius: 999px;
-  background: linear-gradient(135deg, #ff4d6d, #ff8a00);
-  color: #fff;
-  font-size: 11px;
-  font-weight: 900;
-  letter-spacing: .8px;
-  box-shadow: 0 6px 18px rgba(255,90,80,.25);
-}
-
 .price-main {
   display: inline-block;
   font-size: 1.35em;
@@ -246,20 +233,30 @@ url("images/home-video.jpg") center/cover no-repeat
   -webkit-text-fill-color: transparent;
 }
 
-.price-ar {
-  font-weight: 700;
+.promo-badge {
+  display: block;
+  width: fit-content;
+  margin: 9px auto 0;
+  padding: 6px 11px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4d6d, #ff8a00);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: .8px;
+  box-shadow: 0 5px 16px rgba(255,90,80,.25);
 }
 
 .old-price {
   display: block;
-  margin-top: 9px;
+  margin-top: 7px;
   color: #8993a8;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
 }
 
-.old-price s:first-child {
-  margin-right: 8px;
+.old-price s {
+  margin: 0 4px;
 }
 
 .old-price s:last-child {
@@ -273,25 +270,17 @@ url("images/home-video.jpg") center/cover no-repeat
   display: inline-flex !important;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  margin-top: 22px;
-  padding: 13px 21px;
+  gap: 9px;
+  margin-top: 18px;
+  padding: 12px 20px;
   min-width: 145px;
   border-radius: 12px;
   color: #fff !important;
   text-decoration: none !important;
   font-weight: 800;
-  font-size: 14px;
-  letter-spacing: .2px;
   border: 1px solid rgba(255,255,255,.18);
   box-shadow: 0 8px 22px rgba(0,0,0,.25);
   transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
-}
-
-.service-button span {
-  font-size: 18px;
-  line-height: 1;
-  transition: transform .2s ease;
 }
 
 .web-button {
@@ -312,21 +301,12 @@ url("images/home-video.jpg") center/cover no-repeat
   box-shadow: 0 12px 28px rgba(0,0,0,.35);
 }
 
-.service-button:hover span {
-  transform: translateX(4px);
-}
-
-.service-button:active {
-  transform: translateY(0);
-}
-
 @media (max-width: 500px) {
   .service-button {
     width: 100%;
     min-width: 0;
   }
 }
-
 </style>
 
 </head>
@@ -424,7 +404,7 @@ De l'idée jusqu'au résultat final, nous construisons des solutions adaptées �
 <div class="home-service-number">01 / WEB</div>
 <h3>Création de sites web</h3>
 <p>Sites vitrines modernes, rapides, responsive et adaptés à votre activité.</p>
-<a class="home-link" href="services.html#web">
+<a class="home-link service-button web-button" href="services.html#web">
 Découvrir <i class="fa-solid fa-arrow-right"></i>
 </a>
 </div>
@@ -436,7 +416,7 @@ Découvrir <i class="fa-solid fa-arrow-right"></i>
 <div class="home-service-number">02 / DESIGN</div>
 <h3>Design & Photoshop</h3>
 <p>Création et retouche de visuels pour construire une identité professionnelle.</p>
-<a class="home-link" href="services.html#design">
+<a class="home-link service-button design-button" href="services.html#design">
 Découvrir <i class="fa-solid fa-arrow-right"></i>
 </a>
 </div>
@@ -448,7 +428,7 @@ Découvrir <i class="fa-solid fa-arrow-right"></i>
 <div class="home-service-number">03 / VIDÉO</div>
 <h3>Montage vidéo</h3>
 <p>Des montages modernes pour les réseaux sociaux, les entreprises et vos projets.</p>
-<a class="home-link" href="services.html#video">
+<a class="home-link service-button video-button" href="services.html#video">
 Découvrir <i class="fa-solid fa-arrow-right"></i>
 </a>
 </div>
@@ -475,7 +455,12 @@ Les projets spécifiques peuvent être développés sur mesure.
 <article class="offer-card featured">
 <div class="offer-label">OFFRE ESSENTIELLE</div>
 <h3>Site vitrine</h3>
-<div class="offer-price">31 € <small>/ 150 000 Ar</small></div>
+<div class="offer-price">
+  <span class="price-main">31 €</span>
+  <small>/ 150 000 Ar</small>
+  <span class="promo-badge">🔥 EN PROMOTION</span>
+  <span class="old-price"><s>300 000 Ar</s> <s>61 €</s></span>
+</div>
 <p>Une présence professionnelle sur le web, simple, moderne et efficace.</p>
 
 <ul class="offer-features">
@@ -493,7 +478,7 @@ Voir cette offre <i class="fa-solid fa-arrow-right"></i>
 <article class="offer-card">
 <div class="offer-label">SOLUTION SUR MESURE</div>
 <h3>Site avec backend</h3>
-<div class="offer-price">121 € <small>/ 600 000 Ar</small></div>
+<div class="offer-price"><span class="price-main">121 €</span> <small>/ 600 000 Ar</small></div>
 <p>Une solution évolutive avec des fonctionnalités dynamiques selon votre projet.</p>
 
 <ul class="offer-features">
